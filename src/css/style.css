@@ -1,142 +1,520 @@
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Black/lato-bold.eot');
-  src: url('../fonts/Lato/Lato Black/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Black/lato-bold.woff') format('woff'), url('../fonts/Lato/Lato Black/lato-bold.ttf') format('truetype'), url('../fonts/Lato/Lato Black/lato-bold.svg#Lato') format('svg');
-  font-weight: 900;
-  font-style: normal;
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
 }
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato BlackItalic/lato-blackitalic.eot');
-  src: url('../fonts/Lato/Lato BlackItalic/lato-blackitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato BlackItalic/lato-blackitalic.woff') format('woff'), url('../fonts/Lato/Lato BlackItalic/lato-blackitalic.ttf') format('truetype'), url('../fonts/Lato/Lato BlackItalic/lato-blackitalic.svg#Lato') format('svg');
-  font-weight: 900;
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
   font-style: italic;
 }
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens
+@large = ~"only screen and (max-width : 1200px)";
+
+
+Medium Devices, Desktops
+@media only screen and (max-width : 992px) {
+
+}
+
+Small Devices, Tablets
+@media only screen and (max-width : 768px) {
+  
+}
+
+Extra Small Devices, Phones
+@media only screen and (max-width : 480px) {
+
+}
+
+Custom, iPhone Retina
+@media only screen and (max-width : 320px) {
+
+} */
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Heavy/lato-bold.eot');
-  src: url('../fonts/Lato/Lato Heavy/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Heavy/lato-bold.woff') format('woff'), url('../fonts/Lato/Lato Heavy/lato-bold.ttf') format('truetype'), url('../fonts/Lato/Lato Heavy/lato-bold.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensansextrabold.eot');
+  src: url('../fonts/Open Sans/opensansextrabold.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensansextrabold.woff') format('woff'), url('../fonts/Open Sans/opensansextrabold.ttf') format('truetype'), url('../fonts/Open Sans/opensansextrabold.svg#Open Sans') format('svg');
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato HeavyItalic/lato-bolditalic.eot');
-  src: url('../fonts/Lato/Lato HeavyItalic/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato HeavyItalic/lato-bolditalic.woff') format('woff'), url('../fonts/Lato/Lato HeavyItalic/lato-bolditalic.ttf') format('truetype'), url('../fonts/Lato/Lato HeavyItalic/lato-bolditalic.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensansextrabolditalic.eot');
+  src: url('../fonts/Open Sans/opensansextrabolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensansextrabolditalic.woff') format('woff'), url('../fonts/Open Sans/opensansextrabolditalic.ttf') format('truetype'), url('../fonts/Open Sans/opensansextrabolditalic.svg#Open Sans') format('svg');
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Bold/lato-bold.eot');
-  src: url('../fonts/Lato/Lato Bold/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Bold/lato-bold.woff') format('woff'), url('../fonts/Lato/Lato Bold/lato-bold.ttf') format('truetype'), url('../fonts/Lato/Lato Bold/lato-bold.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensansbold.eot');
+  src: url('../fonts/Open Sans/opensansbold.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensansbold.woff') format('woff'), url('../fonts/Open Sans/opensansbold.ttf') format('truetype'), url('../fonts/Open Sans/opensansbold.svg#Open Sans') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato BoldItalic/lato-bolditalic.eot');
-  src: url('../fonts/Lato/Lato BoldItalic/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato BoldItalic/lato-bolditalic.woff') format('woff'), url('../fonts/Lato/Lato BoldItalic/lato-bolditalic.ttf') format('truetype'), url('../fonts/Lato/Lato BoldItalic/lato-bolditalic.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensansbolditalic.eot');
+  src: url('../fonts/Open Sans/opensansbolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensansbolditalic.woff') format('woff'), url('../fonts/Open Sans/opensansbolditalic.ttf') format('truetype'), url('../fonts/Open Sans/opensansbolditalic.svg#Open Sans') format('svg');
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Semibold/lato-semibold.eot');
-  src: url('../fonts/Lato/Lato Semibold/lato-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Semibold/lato-semibold.woff') format('woff'), url('../fonts/Lato/Lato Semibold/lato-semibold.ttf') format('truetype'), url('../fonts/Lato/Lato Semibold/lato-semibold.svg#Lato') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato SemiboldItalic/lato-semibolditalic.eot');
-  src: url('../fonts/Lato/Lato SemiboldItalic/lato-semibolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato SemiboldItalic/lato-semibolditalic.woff') format('woff'), url('../fonts/Lato/Lato SemiboldItalic/lato-semibolditalic.ttf') format('truetype'), url('../fonts/Lato/Lato SemiboldItalic/lato-semibolditalic.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensanssemibolditalic.eot');
+  src: url('../fonts/Open Sans/opensanssemibolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensanssemibolditalic.woff') format('woff'), url('../fonts/Open Sans/opensanssemibolditalic.ttf') format('truetype'), url('../fonts/Open Sans/opensanssemibolditalic.svg#Open Sans') format('svg');
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Medium/lato-medium.eot');
-  src: url('../fonts/Lato/Lato Medium/lato-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Medium/lato-medium.woff') format('woff'), url('../fonts/Lato/Lato Medium/lato-medium.ttf') format('truetype'), url('../fonts/Lato/Lato Medium/lato-medium.svg#Lato') format('svg');
-  font-weight: 500;
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensanssemibold.eot');
+  src: url('../fonts/Open Sans/opensanssemibold.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensanssemibold.woff') format('woff'), url('../fonts/Open Sans/opensanssemibold.ttf') format('truetype'), url('../fonts/Open Sans/opensanssemibold.svg#Open Sans') format('svg');
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato MediumItalic/lato-mediumitalic.eot');
-  src: url('../fonts/Lato/Lato MediumItalic/lato-mediumitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato MediumItalic/lato-mediumitalic.woff') format('woff'), url('../fonts/Lato/Lato MediumItalic/lato-mediumitalic.ttf') format('truetype'), url('../fonts/Lato/Lato MediumItalic/lato-mediumitalic.svg#Lato') format('svg');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Regular/lato-regular.eot');
-  src: url('../fonts/Lato/Lato Regular/lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Regular/lato-regular.woff') format('woff'), url('../fonts/Lato/Lato Regular/lato-regular.ttf') format('truetype'), url('../fonts/Lato/Lato Regular/lato-regular.svg#Lato') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Italic/lato-italic.eot');
-  src: url('../fonts/Lato/Lato Italic/lato-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Italic/lato-italic.woff') format('woff'), url('../fonts/Lato/Lato Italic/lato-italic.ttf') format('truetype'), url('../fonts/Lato/Lato Italic/lato-italic.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensansitalic.eot');
+  src: url('../fonts/Open Sans/opensansitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensansitalic.woff') format('woff'), url('../fonts/Open Sans/opensansitalic.ttf') format('truetype'), url('../fonts/Open Sans/opensansitalic.svg#Open Sans') format('svg');
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Light/lato-light.eot');
-  src: url('../fonts/Lato/Lato Light/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Light/lato-light.woff') format('woff'), url('../fonts/Lato/Lato Light/lato-light.ttf') format('truetype'), url('../fonts/Lato/Lato Light/lato-light.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensans.eot');
+  src: url('../fonts/Open Sans/opensans.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensans.woff') format('woff'), url('../fonts/Open Sans/opensans.ttf') format('truetype'), url('../fonts/Open Sans/opensans.svg#Open Sans') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensanslight.eot');
+  src: url('../fonts/Open Sans/opensanslight.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensanslight.woff') format('woff'), url('../fonts/Open Sans/opensanslight.ttf') format('truetype'), url('../fonts/Open Sans/opensanslight.svg#Open Sans') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato LightItalic/lato-lightitalic.eot');
-  src: url('../fonts/Lato/Lato LightItalic/lato-lightitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato LightItalic/lato-lightitalic.woff') format('woff'), url('../fonts/Lato/Lato LightItalic/lato-lightitalic.ttf') format('truetype'), url('../fonts/Lato/Lato LightItalic/lato-lightitalic.svg#Lato') format('svg');
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/opensanslightitalic.eot');
+  src: url('../fonts/Open Sans/opensanslightitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Open Sans/opensanslightitalic.woff') format('woff'), url('../fonts/Open Sans/opensanslightitalic.ttf') format('truetype'), url('../fonts/Open Sans/opensanslightitalic.svg#Open Sans') format('svg');
   font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Thin/lato-thin.eot');
-  src: url('../fonts/Lato/Lato Thin/lato-thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Thin/lato-thin.woff') format('woff'), url('../fonts/Lato/Lato Thin/lato-thin.ttf') format('truetype'), url('../fonts/Lato/Lato Thin/lato-thin.svg#Lato') format('svg');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato ThinItalic/lato-thinitalic.eot');
-  src: url('../fonts/Lato/Lato ThinItalic/lato-thinitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato ThinItalic/lato-thinitalic.woff') format('woff'), url('../fonts/Lato/Lato ThinItalic/lato-thinitalic.ttf') format('truetype'), url('../fonts/Lato/Lato ThinItalic/lato-thinitalic.svg#Lato') format('svg');
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato Hairline/lato-hairline.eot');
-  src: url('../fonts/Lato/Lato Hairline/lato-hairline.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato Hairline/lato-hairline.woff') format('woff'), url('../fonts/Lato/Lato Hairline/lato-hairline.ttf') format('truetype'), url('../fonts/Lato/Lato Hairline/lato-hairline.svg#Lato') format('svg');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/Lato/Lato HairlineItalic/lato-hairlineitalic.eot');
-  src: url('../fonts/Lato/Lato HairlineItalic/lato-hairlineitalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato/Lato HairlineItalic/lato-hairlineitalic.woff') format('woff'), url('../fonts/Lato/Lato HairlineItalic/lato-hairlineitalic.ttf') format('truetype'), url('../fonts/Lato/Lato HairlineItalic/lato-hairlineitalic.svg#Lato') format('svg');
-  font-weight: 100;
   font-style: italic;
 }
 html {
   font-size: 16px;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans";
   color: #fff;
   background-color: #000;
   background-image: url("../img/bg-pattern.jpg");
-  min-width: 640px;
+  min-width: 200px;
 }
 img {
   max-width: 100%;
   width: auto;
+}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid pink;
 }
 .intro {
   z-index: 20;
@@ -202,31 +580,6 @@ img {
   animation-fill-mode: forwards;
   opacity: 0;
 }
-@-webkit-keyframes slideToUpShow {
-  0% {
-    opacity: 0;
-    transform: skewX(-30deg) translate(0px, 0px);
-  }
-  50% {
-    transform: skewX(-30deg) translate(0px, -395px);
-  }
-  60% {
-    transform: skewX(-30deg) translate(0px, -365px);
-  }
-  70% {
-    transform: skewX(-30deg) translate(0px, -385px);
-  }
-  80% {
-    transform: skewX(-30deg) translate(0px, -370px);
-  }
-  90% {
-    transform: skewX(-30deg) translate(0px, -380px);
-  }
-  100% {
-    opacity: 1;
-    transform: skewX(-30deg) translate(0px, -374.5px);
-  }
-}
 @keyframes slideToUpShow {
   0% {
     opacity: 0;
@@ -252,23 +605,6 @@ img {
     transform: skewX(-30deg) translate(0px, -374.5px);
   }
 }
-@-webkit-keyframes slideToUpHide {
-  0% {
-    opacity: 1;
-    transform: skewX(-30deg) translate(0px, -374.5px);
-  }
-  10% {
-    opacity: 1;
-    transform: skewX(-30deg) translate(0px, -355px);
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: skewX(-30deg) translate(0px, -700px);
-  }
-}
 @keyframes slideToUpHide {
   0% {
     opacity: 1;
@@ -284,30 +620,6 @@ img {
   100% {
     opacity: 0;
     transform: skewX(-30deg) translate(0px, -700px);
-  }
-}
-@-webkit-keyframes slideToDownShow {
-  0% {
-    transform: skewX(30deg) translate(0px, 0px);
-  }
-  50% {
-    transform: skewX(30deg) translate(0px, 345px);
-  }
-  60% {
-    transform: skewX(30deg) translate(0px, 315px);
-  }
-  70% {
-    transform: skewX(30deg) translate(0px, 335px);
-  }
-  80% {
-    transform: skewX(30deg) translate(0px, 315px);
-  }
-  90% {
-    transform: skewX(30deg) translate(0px, 330px);
-  }
-  100% {
-    opacity: 1;
-    transform: skewX(30deg) translate(0px, 325px);
   }
 }
 @keyframes slideToDownShow {
@@ -334,23 +646,6 @@ img {
     transform: skewX(30deg) translate(0px, 325px);
   }
 }
-@-webkit-keyframes slideToDownHide {
-  0% {
-    opacity: 1;
-    transform: skewX(30deg) translate(0px, 325px);
-  }
-  10% {
-    opacity: 1;
-    transform: skewX(30deg) translate(0px, 295px);
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: skewX(30deg) translate(0px, 700px);
-  }
-}
 @keyframes slideToDownHide {
   0% {
     opacity: 1;
@@ -366,30 +661,6 @@ img {
   100% {
     opacity: 0;
     transform: skewX(30deg) translate(0px, 700px);
-  }
-}
-@-webkit-keyframes slideToRightShow {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(365px, 0px);
-  }
-  60% {
-    transform: translate(335px, 0px);
-  }
-  70% {
-    transform: translate(355px, 0px);
-  }
-  80% {
-    transform: translate(340px, 0px);
-  }
-  90% {
-    transform: translate(342px, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(345px, 0px);
   }
 }
 @keyframes slideToRightShow {
@@ -414,23 +685,6 @@ img {
   100% {
     opacity: 1;
     transform: translate(345px, 0px);
-  }
-}
-@-webkit-keyframes slideToRightHide {
-  0% {
-    opacity: 1;
-    transform: translate(345px, 0px);
-  }
-  10% {
-    opacity: 1;
-    transform: translate(325px, 0px);
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(600px, 0px);
   }
 }
 @keyframes slideToRightHide {
@@ -492,10 +746,25 @@ img {
     transform: translateY(-295px);
   }
 }
-.container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+.page-header {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAt0lEQVQYlV3Pu66EIBgA4QF+FDCxNPv+D2ghJMj9FJucYqf/ilHXdS1jDL13vPe01lhrMcYghMDzPIwx8N5jjEGcc8QYed+XlBJaa+acAIgIIoJzDq01YwwkxkjOmVIKv9Va2fedOSc5Z7TWyHmeiAifzwdrLXNOeu8YYziOg/u+/+G2begYI0qprxZhzomIoJQipUStlbUWay1yzt8Hay2tNWKMHMdBrZVSCtZaQgiUUmitsW0bf4fiZv5x+sFVAAAAAElFTkSuQmCC");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  border: 1px solid green;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.page-main {
+  background-image: url("../img/hotRod.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
 }
 .modal-content {
   display: block;

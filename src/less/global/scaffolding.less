@@ -1,14 +1,19 @@
 html {
-  font-size: @base-font-size;
+  font-size: @font-size;
 }
 body {  
-  font-family: sans-serif;
+  font-family: "Open Sans";
   color: #fff;
   background-color: #000;
   background-image: url("../img/bg-pattern.jpg");  
-  min-width: 640px;  
+  min-width: 200px;  
 }
 img {
   max-width: 100%;
   width: auto;
+}
+.container {
+  max-width: 960px;
+  .center();
+  .test-border(pink);
 }
