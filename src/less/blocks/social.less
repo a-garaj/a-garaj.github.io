@@ -1,1 +1,31 @@
-/* .social */
+.social {  
+  float: left;
+  padding: 20px;
+  font-size: 0;
+  &__btn {
+    display: inline-block;
+    vertical-align: top;
+    transition: 0.5s ease-in-out;
+    &--drive {
+      .font-size(16px);
+      color: #a39e9a;
+      padding: 10px 10px;   
+      text-shadow: 0px 0px 1px #fff;   
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid #a39e9a;
+      font-weight: bold;
+      border-radius: 4px;
+      box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.3);
+      &:hover {
+        color: #fff;
+        background-color: #c03;
+        border-color: #c03;
+        box-shadow: none;
+      }
+    }
+    &--vk {
+    background-repeat: no-repeat;
+    }
+  }  
+}

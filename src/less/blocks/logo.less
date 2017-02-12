@@ -1,0 +1,21 @@
+.logo {
+  float: left;  
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    transition: text-shadow 0.3s ease-in-out;
+    .font-size(18px);    
+    &:first-letter { 
+    letter-spacing: 5px;     
+      font-size: 30px;
+      color: red;
+    }
+    &:hover {
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); 
+    }
+  }
+}

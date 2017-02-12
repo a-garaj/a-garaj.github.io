@@ -39,58 +39,61 @@
     <!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
     <header class="page-header">
-        <div class="container">
-          <div class="logo">
-            <img src="" alt="Логотип">
-          </div>
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#">Шаллерея</a></li>
-              <li class="main-nav__item"><a class="main-nav__link main-nav__link--map" href="#">Как проехать?</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+      <div class="container">
+        <div class="logo"><a href="index.html" class="logo__link">Агараж</a></div>
 
+        <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item  main-nav__item--active"><a>О нас</a></li>
+            <li class="main-nav__item"><a href="#">Контакты</a></li>
+            <li class="main-nav__item"><a href="#">Галлерея</a></li>       
+          </ul>          
+        </div>
+      </nav>        
+      </div>
+    </header>
     <main class="page-main">   
       <div class="container">
-        Стерлитамак, Стерлитамакский район, Новая Отрадовка, ул. Стерлинская, 1 ст.2.   
+       <div class="slider">
+         <div class="slider__list">
+           <div class="slider__item">
+             <img src="img/hotRod.png" alt="HotRod">
+           </div>
+         </div>
+       </div>
       </div>
     </main>
-
     <footer class="page-footer">
       <div class="container">
         <section class="social">
-          <a class="social-btn  social-btn--drive" href="https://www.drive2.ru/users/redzil/" >Drive2.ru</a>
-          <a class="social-btn  social-btn--vk" href="https://vk.com/agarageclub" >VK</a>
+          <a class="social__btn  social__btn--drive" href="https://www.drive2.ru/users/redzil/" alt="drive2.ru" title="Мы на DRIVE2">Drive2.ru</a>
+          <a class="social__btn  social__btn--vk" href="https://vk.com/agarageclub">Мы в Вконтакте</a>
         </section>
-        <section class="copyrigt">Ricomen.ru</section>
+        <section class="copyrigt">&copy;&nbsp; <a href="http://www.ricomen.ru">ricomen.ru </a> 2017</section>
       </div>
     </footer>
-<div class="modal-content">
-  <div class="intro">
-    <div class="intro__element-1"></div>
-    <div class="intro__element-2"></div>
-    <div class="intro__element-3"></div>    
-    <div class="intro__element-4"></div>    
-    <span class="intro__text">Гараж</span>
-  </div>  
-</div>
-     <div class="modal-map">
-     <button type="button" class="modal-map__close"></button>
+    <div class="modal-content">
+      <div class="intro">
+        <div class="intro__element-1"></div>
+        <div class="intro__element-2"></div>
+        <div class="intro__element-3"></div>    
+        <div class="intro__element-4"></div>    
+        <span class="intro__text">Гараж</span>
+      </div>  
+    </div>    
+    <div class="modal-map">
+      <button type="button" class="modal-map__close"></button>
       <div id="map_canvas"></div>
     </div>
-  <div class="modal-overlay"></div>
+    <div class="modal-content-overlay"></div>
     <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-  
   </body>
 </html>
+<!--     <script>
+     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+     s.parentNode.insertBefore(g,s)}(document,'script'));
+ </script>  --> 
