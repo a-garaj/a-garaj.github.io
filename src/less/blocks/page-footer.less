@@ -1,6 +1,26 @@
 .page-footer {
-  padding: 20px 0px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   background-image: data-uri("../img/border-pattern.png");
   background-repeat: repeat-x;
-  background-position: top;    
+  background-position: top;
+}
+.contacts {
+  float: left;
+  @media @mobile {
+    float: none;
+    display: block;
+  }
+  &__tel {
+    display: block;
+  }
+  &__title {
+    display: block;     
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }

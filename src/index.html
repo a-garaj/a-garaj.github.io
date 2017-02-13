@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">    
     <title>А-гараж</title> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -34,44 +34,61 @@
         <script src="libs/html5shiv/html5shiv.min.js"></script>
         <script src="libs/html5shiv/respond.min.js"></script>
     <![endif]-->
-  </head>
+  </head>  
   <body>
     <!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
+    <![endif]-->   
     <header class="page-header">
       <div class="container">
         <div class="logo"><a href="index.html" class="logo__link">Агараж</a></div>
-
         <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item  main-nav__item--active"><a>О нас</a></li>
-            <li class="main-nav__item"><a href="#">Контакты</a></li>
-            <li class="main-nav__item"><a href="#">Галлерея</a></li>       
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li><li class="main-nav__item"><a href="#">Контакты</a></li>
+            <li class="main-nav__item"><a href="#">Галлерея</a></li>  
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--map" href="#">Как проехать?</a></li>     
           </ul>          
         </div>
-      </nav>        
+      </nav>           
       </div>
     </header>
-    <main class="page-main">   
-      <div class="container">
-       <div class="slider">
-         <div class="slider__list">
-           <div class="slider__item">
-             <img src="img/hotRod.png" alt="HotRod">
-           </div>
-         </div>
-       </div>
+    <main class="page-main">
+      <div class="container">      
+        <div class="slider">
+          <div class="slide">
+            <h2 class="slide__title">Покраска, полировка</h2>          
+          </div>
+          <div class="slide">
+            <h2 class="slide__title">Восстановление<br>геометрии</h2>
+          </div>
+          <div class="slide">
+            <h2 class="slide__title">Рихтовка, сварка</h2>
+          </div>         
+        </div>     
       </div>
     </main>
     <footer class="page-footer">
       <div class="container">
-        <section class="social">
-          <a class="social__btn  social__btn--drive" href="https://www.drive2.ru/users/redzil/" alt="drive2.ru" title="Мы на DRIVE2">Drive2.ru</a>
-          <a class="social__btn  social__btn--vk" href="https://vk.com/agarageclub">Мы в Вконтакте</a>
+        <section class="contacts">
+          <span class="contacts__tel"></span>
+          <b class="contacts__title">Телефоны:</b>
+          <a href="tel:+73473339177" class="contacts__tel">+7 (3473) 33 - 91 - 77</a>    
+          <a href="tel:+79174149414" class="contacts__tel">+7 (917) 41 - 494 - 14</a>    
+          <a href="tel:+79632359177" class="contacts__tel">+7 (963) 23 - 591 - 77</a>
+          <b class="contacts__title">Адрес:</b>
+          <p>г. Стерлитамак, стерлитамакский район,<br>с. Новая Отрадовка, Стерлинская, 1 ст2</p>
+          <b class="contacts__title">Время работы:</b>
+          <p>Пн - Пт: С 09:00 До 18:00<br>
+             Сб - Вс: Выходной день
+          </p>
         </section>
-        <section class="copyrigt">&copy;&nbsp; <a href="http://www.ricomen.ru">ricomen.ru </a> 2017</section>
+        <section class="social">
+          <b class="social__title">Мы в соц.сетях:</b>
+          <a class="social__btn  social__btn--drive" href="https://www.drive2.ru/users/redzil/" alt="drive2.ru" title="Мы на DRIVE2">Drive2.ru</a>
+          <a class="social__btn  social__btn--vk" href="https://vk.com/agarageclub">Вконтатке</a>
+        </section>        
+        <section class="copyright">&copy;&nbsp; Агараж 2017</section>
       </div>
     </footer>
     <div class="modal-content">

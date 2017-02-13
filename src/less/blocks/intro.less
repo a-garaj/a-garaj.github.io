@@ -6,14 +6,17 @@
   width: 300px;
   height: 300px;  
   transform: scale(1.5);
+  @media @mobile {
+    transform: scale(1);
+  }
 }
 .intro__text {
   position: absolute;
   color: #fff;
   font-weight: bold;
   font-size: 60px;
-  left: 13px;
-  bottom: -150px;
+  left: 10px;
+  bottom: -160px;
   text-transform: uppercase;
   letter-spacing: 17px;
   animation-name: showText, hideText;

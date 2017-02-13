@@ -41,6 +41,14 @@
       display: block;
       animation: bounce 1s;
     }
+    @media @tablet {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
     &__close {
       cursor: pointer;      
       position: absolute;
@@ -54,6 +62,12 @@
       outline: none;
       transition: 0.3s ease-in-out;
       background-color: #000;
+      @media @tablet {
+      top: 10px;
+      right: 10px;
+      width: 50px;      
+      height: 50px;   
+     }
       &:hover {
         box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);        
         transform: rotate(90deg);
@@ -69,7 +83,15 @@
         margin-left: -8px;
         top: 50%;
         margin-top: -1.5px;  
-        transform: rotate(-45deg);      
+        transform: rotate(-45deg); 
+        @media @tablet {
+          width: 24px;
+          height: 4px;
+          left: 50%;
+          margin-left: -12px;
+          top: 50%;
+          margin-top: -1.5px;  
+        }     
       }
       &::after {
         transform: rotate(45deg);

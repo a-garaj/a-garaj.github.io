@@ -1,3 +1,46 @@
-.slider {
-  
-} 
+.slider {  
+  position: relative;
+  width: 100%;
+  height: 540px;
+  margin-left: auto;
+  margin-right: auto;  
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.slide {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 540px;
+  transition: left 1s ease-in-out;
+
+  &__title {        
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 40px;
+    color: #fff;    
+    &:first-letter {
+      color: red;
+    }
+  }
+  &:nth-child(1) {
+    background: linear-gradient(130deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.3) 30%), url("../img/slide-img/kuzov_11.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &:nth-child(2) {
+    background: linear-gradient(130deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.3) 30%), url("../img/slide-img/AutoDon_Vosstanovlenie_geometrii-000061.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &:nth-child(3) {
+    background: linear-gradient(130deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.3) 30%), url("../img/slide-img/car-body-repairs-derby1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
