@@ -13,9 +13,16 @@ var autoprefixer = require('gulp-autoprefixer'); // Подключаем биб�
 var plumber      = require('gulp-plumber');      // Слушаем ошибки
 var csscomb      = require('gulp-csscomb');      // Причесываем CSS
 var spritesmith  = require('gulp.spritesmith');  // Собираем спрайт 
-var gcmq         = require('gulp-group-css-media-queries'); //Группируем media queries
+var mmq          = require('gulp-merge-media-queries'); //Группируем media queries
 var smartgrid    = require('smart-grid');        // Сетка Smart-grid
 
+gulp.task('mmq', function () {
+  gulp.src('src/**/*.css')
+    .pipe(mmq({
+      log: true      
+    }))
+    .pipe(gulp.dest('src/'));
+});
 
 gulp.task('less', function(){                     // Создаем таск Less
     gulp.src('src/less/style.less')              // Берем источник
@@ -61,7 +68,8 @@ gulp.task('scripts', function() {
 gulp.task('css-libs', ['less'], function() {
     return gulp.src('src/css/style.css')                            // Выбираем файл для минификации
         .pipe(autoprefixer(['last 2 versions'], { cascade: true })) // Создаем префиксы
-        .pipe(csscomb())                                           // Причесываем CSS
+        .pipe(csscomb())                                            // Причесываем CSS
+        .pipe(mmq())                                                // Группируем медиа запросы
         .pipe(cssnano())                                            // Сжимаем
         .pipe(rename({suffix: '.min'}))                             // Добавляем суффикс .min
         .pipe(gulp.dest('src/css'));                                // Выгружаем в папку src/css
