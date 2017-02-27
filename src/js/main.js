@@ -4,7 +4,7 @@
   var modalMapCloseBtn = modalMap.querySelector(".modal-map__close");
   var showMapBtn       = document.querySelector(".main-nav__link--map");
   var overlay          = document.querySelector(".modal-content-overlay");
-  var slides           = document.querySelectorAll('.slide');     
+  
   var Tap = {};
   var utils = {};
 
@@ -161,8 +161,6 @@
 
   initModal();
 
-  window.onresize = initSlider;  
-
   function initModal() {    
     modalBlock.classList.add("modal-content--show");
        overlay.classList.add("modal-content--show");
@@ -193,47 +191,7 @@
   }
 
   setTimeout(function() {    
-    opacity(modalBlock)}, 7000);
-  
-  //slider-begin
-    function initSlider() {//выстаиваем слайды
-    for(var i = 0;  i < slides.length; i++) {
-      slides[i].style.left = (slides[i].offsetWidth * i) + "px";
-    }
-  }
-  function checkLastSlide() {//проверяем крайний  
-     if(parseInt(slides[0].style.left) !== parseInt(-(slides.length-1)*slides[0].offsetWidth)) {    
-      return true;
-    } else return false;
-  }
-  function checkFirstSlide() {//проверяем крайний   
-     if (parseInt(slides[0].style.left) !== 0) {     
-      return true;
-    } else return false;
-  }
-  function lastSlide() {//передвигаем последний слайд в начало
-    for (var i = 0; i < slides.length; i++) {    
-      slides[i].style.left = -parseInt(slides[0].offsetWidth * ((slides.length - i)-1))+ "px";
-    }
-  }
-  function nextSlide() {//след. слайд
-    if(checkLastSlide()) {
-      for(var i = 0;  i < slides.length; i++) {
-        slides[i].style.left = parseInt(slides[i].style.left) - slides[0].offsetWidth + "px";    
-        }
-      } else initSlider();  
-  }  
-  function prevSlide() {//пред. слайд
-    if(checkFirstSlide()) {
-      for(var i = 0;  i < slides.length; i++) {
-        slides[i].style.left = parseInt(slides[i].style.left) + slides[0].offsetWidth + "px";
-      }
-    } else lastSlide();
-  }
-
-setInterval(function() {
-  nextSlide();}, 5000);
-//slider-end
+    opacity(modalBlock)}, 7000);  
 
   function initialize() {
    var myLatlng = new google.maps.LatLng(53.599323, 55.890861);
