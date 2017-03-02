@@ -187,8 +187,7 @@
     setTimeout(function() {
     modalBlock.classList.remove("modal-content--show");
      overlay.classList.remove("modal-content--show");
-     overlay.classList.remove("modal-content--opacity");
-     initSlider();
+     overlay.classList.remove("modal-content--opacity");     
     }, 300);
   }
 
@@ -212,6 +211,5 @@
               scaledSize: new google.maps.Size(130, 110)
       }
     });
-  }  
-
+  }
 })();
