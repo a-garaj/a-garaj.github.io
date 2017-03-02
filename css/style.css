@@ -825,8 +825,7 @@ __toggle {
   border-radius: 4px;
 }
 .social {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px;  
   float: right;
 }
 @media (max-width : 768px) {
@@ -845,6 +844,7 @@ __toggle {
   font-weight: bold;
 }
 .social__btn {
+  margin-bottom: 10px;
   display: inline-block;
   vertical-align: middle;
   transition: 0.5s ease-in-out;
