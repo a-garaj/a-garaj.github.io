@@ -8,6 +8,8 @@
   var Tap = {};
   var utils = {};
 
+  VK.Widgets.Like("vk_like", {type: "button"});
+
   utils.attachEvent = function(element, eventName, callback) {
       if ('addEventListener' in window) {
           return element.addEventListener(eventName, callback, false);
