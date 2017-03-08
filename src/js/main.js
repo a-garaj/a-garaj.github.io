@@ -5,6 +5,8 @@
   var showMapBtn       = document.querySelector(".main-nav__link--map");
   var overlay          = document.querySelector(".modal-content-overlay");
   
+  VK.init({apiId: 5903616, onlyWidgets: true});
+
   var Tap = {};
   var utils = {};
 

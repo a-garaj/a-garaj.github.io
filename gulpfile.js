@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
 
 gulp.task('css-libs', ['less'], function() {
     return gulp.src('src/css/style.css')                            // Выбираем файл для минификации
-        .pipe(autoprefixer(['last 2 versions'], { cascade: true })) // Создаем префиксы
+        .pipe(autoprefixer(['last 4 versions'], { cascade: true })) // Создаем префиксы
         .pipe(csscomb())                                            // Причесываем CSS
         .pipe(mmq())                                                // Группируем медиа запросы
         .pipe(cssnano())                                            // Сжимаем

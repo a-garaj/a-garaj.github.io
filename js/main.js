@@ -5,10 +5,10 @@
   var showMapBtn       = document.querySelector(".main-nav__link--map");
   var overlay          = document.querySelector(".modal-content-overlay");
   
+  VK.init({apiId: 5903616, onlyWidgets: true});
+
   var Tap = {};
   var utils = {};
-
-  VK.Widgets.Like("vk_like", {type: "button"});
 
   utils.attachEvent = function(element, eventName, callback) {
       if ('addEventListener' in window) {
@@ -187,7 +187,8 @@
     setTimeout(function() {
     modalBlock.classList.remove("modal-content--show");
      overlay.classList.remove("modal-content--show");
-     overlay.classList.remove("modal-content--opacity");     
+     overlay.classList.remove("modal-content--opacity");
+     initSlider();
     }, 300);
   }
 
@@ -211,5 +212,6 @@
               scaledSize: new google.maps.Size(130, 110)
       }
     });
-  }
+  }  
+
 })();

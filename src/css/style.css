@@ -969,6 +969,11 @@ __toggle {
   background-size: 100%;
   min-height: 500px;
 }
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-main__content {
+    background-image: url("../img/index-bg.png");
+  }
+}
 .page-footer {
   padding-top: 10px;
   padding-bottom: 30px;
