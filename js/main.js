@@ -3,9 +3,7 @@
   var modalMap         = document.querySelector(".modal-map");
   var modalMapCloseBtn = modalMap.querySelector(".modal-map__close");
   var showMapBtn       = document.querySelector(".main-nav__link--map");
-  var overlay          = document.querySelector(".modal-content-overlay");
-  
-  VK.init({apiId: 5903616, onlyWidgets: true});
+  var overlay          = document.querySelector(".modal-content-overlay"); 
 
   var Tap = {};
   var utils = {};
