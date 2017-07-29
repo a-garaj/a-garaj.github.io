@@ -999,6 +999,52 @@ __toggle {
   margin: 0;
   padding: 0;
 }
+.modal {
+  position: relative;
+}
+.modal-close-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  outline: none;
+  background: #000;
+}
+@media (max-width : 768px) {
+  .modal-close-btn {
+    top: 20px;
+    right: 20px;
+  }
+}
+.modal-close-btn span {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 10px;
+  transform: translateY(-50%);
+}
+.modal-close-btn::before,
+.modal-close-btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+}
+.modal-close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal-close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 .modal-content {
   display: none;
   position: fixed;

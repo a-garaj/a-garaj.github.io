@@ -3,7 +3,13 @@
   var modalMap         = document.querySelector(".modal-map");
   var modalMapCloseBtn = modalMap.querySelector(".modal-map__close");
   var showMapBtn       = document.querySelector(".main-nav__link--map");
-  var overlay          = document.querySelector(".modal-content-overlay"); 
+  var overlay          = document.querySelector(".modal-content-overlay");
+  var modalClsBtn      = modalBlock.querySelector(".modal-close-btn");
+
+  modalClsBtn.addEventListener("click", function() {
+    hideModal();
+  })
+  // VK.init({apiId: 5903616, onlyWidgets: true});
 
   var Tap = {};
   var utils = {};
@@ -163,7 +169,12 @@
 
   function initModal() {    
     modalBlock.classList.add("modal-content--show");
-       overlay.classList.add("modal-content--show");
+    overlay.classList.add("modal-content--show");
+  }
+
+  function hideModal() {
+    modalBlock.classList.remove("modal-content--show");
+    overlay.classList.remove("modal-content--show");  
   }
 
   showMapBtn.addEventListener("tap", function(event) {
@@ -185,7 +196,8 @@
     setTimeout(function() {
     modalBlock.classList.remove("modal-content--show");
      overlay.classList.remove("modal-content--show");
-     overlay.classList.remove("modal-content--opacity");     
+     overlay.classList.remove("modal-content--opacity");
+     // initSlider();
     }, 300);
   }
 

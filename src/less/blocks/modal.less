@@ -1,4 +1,47 @@
 .modal {
+  position: relative;
+  &-close-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    outline: none;    
+    background: #000;
+    @media @mobile {   
+      top: 20px;
+      right: 20px;      
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      font-size: 10px;
+      transform: translateY(-50%);
+      // text-transform: uppercase;
+    }
+    &::before, &::after  {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 2px;
+      background: #fff;      
+    }
+    &::before {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+  
   &-content { 
   display: none; 
   position: fixed;
